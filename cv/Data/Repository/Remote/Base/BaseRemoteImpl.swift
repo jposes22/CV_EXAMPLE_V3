@@ -16,6 +16,9 @@ final class BaseRemoteImpl: BaseRemote {
         
         do {
             let (data, response) = try await createSession().data(for: urlRequest)
+            
+            BaseRemoteImpl.createLogResponse(urlRequest: urlRequest, data: data, response: response)
+            
             // TODO: Handle api errors
             guard checkStatusCode(response: response) != nil else {
                 return .failure(ApiError.internalError)
@@ -59,8 +62,9 @@ private extension BaseRemoteImpl {
 // MARK: - Util Logs
 private extension BaseRemoteImpl {
     
-    static func createLogResponse(url: String, data: Data?, response: URLResponse?, error: Error?) {
-        debugPrint(" <---- " + url)
+    static func createLogResponse(urlRequest: URLRequest, data: Data?, response: URLResponse?) {
+        debugPrint(" <---- " + (urlRequest.url?.absoluteString ?? ""))
+        debugPrint(" HTTP METHOD: \(urlRequest.httpMethod ?? "GET")")
         if let data = data {
             debugPrint(" HTTP BODY RESPONSE: \(String(decoding: data, as: UTF8.self))")
         }
@@ -73,7 +77,7 @@ private extension BaseRemoteImpl {
             debugPrint(" HTTP HEADERS: \(key) \(value)")
         })
         if let data = urlRequest.httpBody {
-            debugPrint(" HTTP BODY: \(String(decoding: data, as: UTF8.self))")
+            debugPrint(" HTTP BODY REQUEST: \(String(decoding: data, as: UTF8.self))")
         }
     }
 }
