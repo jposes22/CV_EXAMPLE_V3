@@ -19,6 +19,7 @@
 		C83BD5AA2A4B510600403D79 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BD5A92A4B510600403D79 /* CharacterRepository.swift */; };
 		C83BD5AC2A4B513D00403D79 /* CharacterRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BD5AB2A4B513D00403D79 /* CharacterRepositoryImpl.swift */; };
 		C83BD5AE2A4B530800403D79 /* CharacterTestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BD5AD2A4B530800403D79 /* CharacterTestMock.swift */; };
+		C87B776B2A4DF08800360D48 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B776A2A4DF08700360D48 /* CharacterListViewModel.swift */; };
 		C893410C2A4B4AF500F11160 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893410B2A4B4AF500F11160 /* AppDelegate.swift */; };
 		C893410E2A4B4AF500F11160 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893410D2A4B4AF500F11160 /* SceneDelegate.swift */; };
 		C89341102A4B4AF500F11160 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893410F2A4B4AF500F11160 /* ViewController.swift */; };
@@ -31,7 +32,6 @@
 		C8B093F12A4CC17800503E3D /* CharacterListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F02A4CC17800503E3D /* CharacterListConfigurator.swift */; };
 		C8B093F32A4CC1F500503E3D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F22A4CC1F500503E3D /* CharacterListView.swift */; };
 		C8B093F52A4CC22900503E3D /* CharacterListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */; };
-		C8B093F72A4CC28C00503E3D /* CharacterListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */; };
 		C8B093F92A4CC2B700503E3D /* CharacterListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F82A4CC2B700503E3D /* CharacterListPresenterImpl.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +65,7 @@
 		C83BD5A92A4B510600403D79 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		C83BD5AB2A4B513D00403D79 /* CharacterRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryImpl.swift; sourceTree = "<group>"; };
 		C83BD5AD2A4B530800403D79 /* CharacterTestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTestMock.swift; sourceTree = "<group>"; };
+		C87B776A2A4DF08700360D48 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
 		C89341082A4B4AF500F11160 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C893410B2A4B4AF500F11160 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C893410D2A4B4AF500F11160 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		C8B093F02A4CC17800503E3D /* CharacterListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListConfigurator.swift; sourceTree = "<group>"; };
 		C8B093F22A4CC1F500503E3D /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractorImpl.swift; sourceTree = "<group>"; };
-		C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListProtocol.swift; sourceTree = "<group>"; };
 		C8B093F82A4CC2B700503E3D /* CharacterListPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,7 +284,6 @@
 			children = (
 				C8B093E82A4CC05F00503E3D /* Configuration */,
 				C8B093E92A4CC06F00503E3D /* Presenter */,
-				C8B093E72A4CC05800503E3D /* Protocol */,
 				C8B093E62A4CC04B00503E3D /* Interactor */,
 				C8B093EE2A4CC0A500503E3D /* View */,
 			);
@@ -309,14 +308,6 @@
 				C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		C8B093E72A4CC05800503E3D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		C8B093E82A4CC05F00503E3D /* Configuration */ = {
@@ -367,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				C8B093F22A4CC1F500503E3D /* CharacterListView.swift */,
+				C87B776A2A4DF08700360D48 /* CharacterListViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,7 +508,6 @@
 				C83BD59F2A4B4E3800403D79 /* CharacterRequest.swift in Sources */,
 				C89341102A4B4AF500F11160 /* ViewController.swift in Sources */,
 				C8B093F32A4CC1F500503E3D /* CharacterListView.swift in Sources */,
-				C8B093F72A4CC28C00503E3D /* CharacterListProtocol.swift in Sources */,
 				C8B093F92A4CC2B700503E3D /* CharacterListPresenterImpl.swift in Sources */,
 				C8B093F12A4CC17800503E3D /* CharacterListConfigurator.swift in Sources */,
 				C83BD5AC2A4B513D00403D79 /* CharacterRepositoryImpl.swift in Sources */,
@@ -528,6 +519,7 @@
 				C83BD5AA2A4B510600403D79 /* CharacterRepository.swift in Sources */,
 				C83BD5A12A4B4E5300403D79 /* CharacterResponse.swift in Sources */,
 				C83BD59A2A4B4C7600403D79 /* BaseRemoteImpl.swift in Sources */,
+				C87B776B2A4DF08800360D48 /* CharacterListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

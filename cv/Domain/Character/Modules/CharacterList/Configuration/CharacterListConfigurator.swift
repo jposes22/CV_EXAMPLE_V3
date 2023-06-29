@@ -5,12 +5,16 @@ final class CharacterListConfigurator {
     
     class func createModule() -> some View {
         var view = CharacterListView()
-        let interactor = CharacterListInteractorImpl()
+        
         let presenter = CharacterListPresenterImpl()
-        // view.interactor = interactor
-        // interactor.presenter = presenter
-        // presenter.view = view
-
+        
+        let characterRepository = CharacterRepositoryImpl(baseRemote: BaseRemoteImpl())
+        let interactor = CharacterListInteractorImpl(presenter: presenter, characterListRepository: characterRepository)
+        
+        view.interactor = interactor
+        presenter.view = view
+        
         return view
     }
+
 }
