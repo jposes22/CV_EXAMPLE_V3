@@ -28,6 +28,11 @@
 		C893411B2A4B4AF600F11160 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89341192A4B4AF600F11160 /* LaunchScreen.storyboard */; };
 		C89341302A4B4AF600F11160 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893412F2A4B4AF600F11160 /* UITests.swift */; };
 		C89341322A4B4AF600F11160 /* UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89341312A4B4AF600F11160 /* UITestsLaunchTests.swift */; };
+		C8B093F12A4CC17800503E3D /* CharacterListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F02A4CC17800503E3D /* CharacterListConfigurator.swift */; };
+		C8B093F32A4CC1F500503E3D /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F22A4CC1F500503E3D /* CharacterListView.swift */; };
+		C8B093F52A4CC22900503E3D /* CharacterListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */; };
+		C8B093F72A4CC28C00503E3D /* CharacterListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */; };
+		C8B093F92A4CC2B700503E3D /* CharacterListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B093F82A4CC2B700503E3D /* CharacterListPresenterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		C893412B2A4B4AF600F11160 /* cvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C893412F2A4B4AF600F11160 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
 		C89341312A4B4AF600F11160 /* UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8B093F02A4CC17800503E3D /* CharacterListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListConfigurator.swift; sourceTree = "<group>"; };
+		C8B093F22A4CC1F500503E3D /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractorImpl.swift; sourceTree = "<group>"; };
+		C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListProtocol.swift; sourceTree = "<group>"; };
+		C8B093F82A4CC2B700503E3D /* CharacterListPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,110 +110,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C83BD57D2A4B4B6C00403D79 /* UI */ = {
+		C83BD5842A4B4C7600403D79 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD5B12A4B574300403D79 /* Characters */,
-				C83BD5AF2A4B572800403D79 /* Utils */,
+				C8B093DB2A4CBE2500503E3D /* Base */,
+				C8B093DC2A4CBE2C00503E3D /* Character */,
 			);
-			path = UI;
+			path = Domain;
 			sourceTree = "<group>";
 		};
-		C83BD5842A4B4C7600403D79 /* Data */ = {
+		C83BD5892A4B4C7600403D79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD5852A4B4C7600403D79 /* Repository */,
-				C83BD5892A4B4C7600403D79 /* Model */,
+				C8B093DF2A4CBE9100503E3D /* Repository */,
+				C8B093DE2A4CBE6200503E3D /* Remote */,
 			);
-			path = Data;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		C83BD5852A4B4C7600403D79 /* Repository */ = {
+		C83BD5A32A4B4F8D00403D79 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD58A2A4B4C7600403D79 /* Remote */,
-				C83BD5A82A4B50F200403D79 /* Character */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		C83BD5892A4B4C7600403D79 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C83BD58A2A4B4C7600403D79 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD58E2A4B4C7600403D79 /* Base */,
-				C83BD59D2A4B4E2A00403D79 /* Character */,
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
-		C83BD58E2A4B4C7600403D79 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD59B2A4B4CB000403D79 /* ApiConstants.swift */,
-				C83BD58F2A4B4C7600403D79 /* BaseRequest.swift */,
-				C83BD5902A4B4C7600403D79 /* BaseRemote.swift */,
-				C83BD5912A4B4C7600403D79 /* BaseResponse.swift */,
-				C83BD5922A4B4C7600403D79 /* BaseRemoteImpl.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		C83BD59D2A4B4E2A00403D79 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD59E2A4B4E3800403D79 /* CharacterRequest.swift */,
-				C83BD5A02A4B4E5300403D79 /* CharacterResponse.swift */,
+				C8B093E32A4CBFC900503E3D /* Models */,
 			);
 			path = Character;
-			sourceTree = "<group>";
-		};
-		C83BD5A32A4B4F8D00403D79 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD5A42A4B4F9C00403D79 /* Repository */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		C83BD5A42A4B4F9C00403D79 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD5A52A4B4FA700403D79 /* Character */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		C83BD5A52A4B4FA700403D79 /* Character */ = {
-			isa = PBXGroup;
-			children = (
 				C83BD5A62A4B505000403D79 /* CharacterRepositoryTests.swift */,
 				C83BD5AD2A4B530800403D79 /* CharacterTestMock.swift */,
 			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		C83BD5A82A4B50F200403D79 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD5A92A4B510600403D79 /* CharacterRepository.swift */,
-				C83BD5AB2A4B513D00403D79 /* CharacterRepositoryImpl.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		C83BD5AF2A4B572800403D79 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				C83BD5B02A4B572F00403D79 /* Extensions */,
-			);
-			path = Utils;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		C83BD5B02A4B572F00403D79 /* Extensions */ = {
@@ -212,13 +151,6 @@
 				C83BD5822A4B4BF200403D79 /* StringExtension.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		C83BD5B12A4B574300403D79 /* Characters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Characters;
 			sourceTree = "<group>";
 		};
 		C89340FF2A4B4AF500F11160 = {
@@ -244,8 +176,7 @@
 		C893410A2A4B4AF500F11160 /* cv */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD5842A4B4C7600403D79 /* Data */,
-				C83BD57D2A4B4B6C00403D79 /* UI */,
+				C83BD5842A4B4C7600403D79 /* Domain */,
 				C893410B2A4B4AF500F11160 /* AppDelegate.swift */,
 				C893410D2A4B4AF500F11160 /* SceneDelegate.swift */,
 				C893410F2A4B4AF500F11160 /* ViewController.swift */,
@@ -261,7 +192,7 @@
 		C89341242A4B4AF600F11160 /* cvTests */ = {
 			isa = PBXGroup;
 			children = (
-				C83BD5A32A4B4F8D00403D79 /* Data */,
+				C83BD5A32A4B4F8D00403D79 /* Character */,
 			);
 			path = cvTests;
 			sourceTree = "<group>";
@@ -273,6 +204,178 @@
 				C89341312A4B4AF600F11160 /* UITestsLaunchTests.swift */,
 			);
 			path = cvUITests;
+			sourceTree = "<group>";
+		};
+		C8B093DB2A4CBE2500503E3D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093E02A4CBEDE00503E3D /* Remote */,
+				C8B093E12A4CBF1400503E3D /* UI */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C8B093DC2A4CBE2C00503E3D /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD5892A4B4C7600403D79 /* Models */,
+				C8B093E22A4CBF3300503E3D /* Modules */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C8B093DE2A4CBE6200503E3D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD59E2A4B4E3800403D79 /* CharacterRequest.swift */,
+				C83BD5A02A4B4E5300403D79 /* CharacterResponse.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C8B093DF2A4CBE9100503E3D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD5A92A4B510600403D79 /* CharacterRepository.swift */,
+				C83BD5AB2A4B513D00403D79 /* CharacterRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C8B093E02A4CBEDE00503E3D /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD59B2A4B4CB000403D79 /* ApiConstants.swift */,
+				C83BD58F2A4B4C7600403D79 /* BaseRequest.swift */,
+				C83BD5902A4B4C7600403D79 /* BaseRemote.swift */,
+				C83BD5912A4B4C7600403D79 /* BaseResponse.swift */,
+				C83BD5922A4B4C7600403D79 /* BaseRemoteImpl.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C8B093E12A4CBF1400503E3D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD5B02A4B572F00403D79 /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C8B093E22A4CBF3300503E3D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093E42A4CC02900503E3D /* CharacterList */,
+				C8B093E52A4CC03400503E3D /* CharacterDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C8B093E32A4CBFC900503E3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C83BD5A42A4B4F9C00403D79 /* Repository */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C8B093E42A4CC02900503E3D /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093E82A4CC05F00503E3D /* Configuration */,
+				C8B093E92A4CC06F00503E3D /* Presenter */,
+				C8B093E72A4CC05800503E3D /* Protocol */,
+				C8B093E62A4CC04B00503E3D /* Interactor */,
+				C8B093EE2A4CC0A500503E3D /* View */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		C8B093E52A4CC03400503E3D /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093EA2A4CC09D00503E3D /* Configuration */,
+				C8B093EB2A4CC09D00503E3D /* Interactor */,
+				C8B093ED2A4CC09D00503E3D /* Presenter */,
+				C8B093EC2A4CC09D00503E3D /* Protocol */,
+				C8B093EF2A4CC0BE00503E3D /* View */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		C8B093E62A4CC04B00503E3D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093F42A4CC22900503E3D /* CharacterListInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C8B093E72A4CC05800503E3D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093F62A4CC28C00503E3D /* CharacterListProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C8B093E82A4CC05F00503E3D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093F02A4CC17800503E3D /* CharacterListConfigurator.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C8B093E92A4CC06F00503E3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093F82A4CC2B700503E3D /* CharacterListPresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C8B093EA2A4CC09D00503E3D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C8B093EB2A4CC09D00503E3D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C8B093EC2A4CC09D00503E3D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C8B093ED2A4CC09D00503E3D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C8B093EE2A4CC0A500503E3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8B093F22A4CC1F500503E3D /* CharacterListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C8B093EF2A4CC0BE00503E3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,10 +515,15 @@
 				C83BD5992A4B4C7600403D79 /* BaseResponse.swift in Sources */,
 				C83BD59F2A4B4E3800403D79 /* CharacterRequest.swift in Sources */,
 				C89341102A4B4AF500F11160 /* ViewController.swift in Sources */,
+				C8B093F32A4CC1F500503E3D /* CharacterListView.swift in Sources */,
+				C8B093F72A4CC28C00503E3D /* CharacterListProtocol.swift in Sources */,
+				C8B093F92A4CC2B700503E3D /* CharacterListPresenterImpl.swift in Sources */,
+				C8B093F12A4CC17800503E3D /* CharacterListConfigurator.swift in Sources */,
 				C83BD5AC2A4B513D00403D79 /* CharacterRepositoryImpl.swift in Sources */,
 				C83BD5982A4B4C7600403D79 /* BaseRemote.swift in Sources */,
 				C83BD5832A4B4BF200403D79 /* StringExtension.swift in Sources */,
 				C893410C2A4B4AF500F11160 /* AppDelegate.swift in Sources */,
+				C8B093F52A4CC22900503E3D /* CharacterListInteractorImpl.swift in Sources */,
 				C893410E2A4B4AF500F11160 /* SceneDelegate.swift in Sources */,
 				C83BD5AA2A4B510600403D79 /* CharacterRepository.swift in Sources */,
 				C83BD5A12A4B4E5300403D79 /* CharacterResponse.swift in Sources */,
