@@ -30,6 +30,13 @@
 		C890068F2A4DFBB500436500 /* CharacterRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */; };
 		C89006972A4DFBCC00436500 /* UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006952A4DFBCC00436500 /* UITestsLaunchTests.swift */; };
 		C89006982A4DFBCC00436500 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006962A4DFBCC00436500 /* UITests.swift */; };
+		C890069F2A4EBE6900436500 /* CharacterListDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890069E2A4EBE6900436500 /* CharacterListDM.swift */; };
+		C89006A22A4F07D900436500 /* CharacterListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006A12A4F07D900436500 /* CharacterListCardView.swift */; };
+		C89006A52A4F1ABD00436500 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006A42A4F1ABD00436500 /* ColorExtension.swift */; };
+		C89006A72A4F1DDD00436500 /* PaddingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006A62A4F1DDD00436500 /* PaddingUtils.swift */; };
+		C89006A92A4F1F3A00436500 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006A82A4F1F3A00436500 /* CustomSearchBar.swift */; };
+		C89006AB2A4F236300436500 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006AA2A4F236300436500 /* CharacterDetailView.swift */; };
+		C89006AE2A4F285100436500 /* HeaderTitleWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006AD2A4F285100436500 /* HeaderTitleWithImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryTests.swift; sourceTree = "<group>"; };
 		C89006952A4DFBCC00436500 /* UITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C89006962A4DFBCC00436500 /* UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		C890069E2A4EBE6900436500 /* CharacterListDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDM.swift; sourceTree = "<group>"; };
+		C89006A12A4F07D900436500 /* CharacterListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCardView.swift; sourceTree = "<group>"; };
+		C89006A42A4F1ABD00436500 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C89006A62A4F1DDD00436500 /* PaddingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingUtils.swift; sourceTree = "<group>"; };
+		C89006A82A4F1F3A00436500 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		C89006AA2A4F236300436500 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		C89006AD2A4F285100436500 /* HeaderTitleWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleWithImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,8 +258,10 @@
 		C89006652A4DFB9D00436500 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C89006A02A4F07BD00436500 /* Components */,
 				C89006662A4DFB9D00436500 /* CharacterListView.swift */,
 				C89006672A4DFB9D00436500 /* CharacterListViewModel.swift */,
+				C890069E2A4EBE6900436500 /* CharacterListDM.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,7 +279,6 @@
 			children = (
 				C890066B2A4DFB9D00436500 /* Configuration */,
 				C890066C2A4DFB9D00436500 /* Presenter */,
-				C890066D2A4DFB9D00436500 /* Protocol */,
 				C890066E2A4DFB9D00436500 /* View */,
 				C890066F2A4DFB9D00436500 /* Interactor */,
 			);
@@ -284,16 +299,11 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		C890066D2A4DFB9D00436500 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		C890066E2A4DFB9D00436500 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C89006AC2A4F283100436500 /* Components */,
+				C89006AA2A4F236300436500 /* CharacterDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +327,7 @@
 		C89006712A4DFB9D00436500 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C89006A32A4F1A9500436500 /* Utils */,
 				C89006722A4DFB9D00436500 /* Extensions */,
 			);
 			path = UI;
@@ -325,6 +336,7 @@
 		C89006722A4DFB9D00436500 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C89006A42A4F1ABD00436500 /* ColorExtension.swift */,
 				C89006732A4DFB9D00436500 /* StringExtension.swift */,
 			);
 			path = Extensions;
@@ -346,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				C890068A2A4DFBB500436500 /* Models */,
+				C89006992A4E0A6500436500 /* Modules */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -365,6 +378,70 @@
 				C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		C89006992A4E0A6500436500 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C890069A2A4E0A7900436500 /* CharacterList */,
+				C890069B2A4E0A7E00436500 /* CharacterDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C890069A2A4E0A7900436500 /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				C890069D2A4E0AF400436500 /* Interactor */,
+				C890069C2A4E0AED00436500 /* Presenter */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		C890069B2A4E0A7E00436500 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		C890069C2A4E0AED00436500 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C890069D2A4E0AF400436500 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C89006A02A4F07BD00436500 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C89006A82A4F1F3A00436500 /* CustomSearchBar.swift */,
+				C89006A12A4F07D900436500 /* CharacterListCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C89006A32A4F1A9500436500 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C89006A62A4F1DDD00436500 /* PaddingUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C89006AC2A4F283100436500 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C89006AD2A4F285100436500 /* HeaderTitleWithImage.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,19 +578,26 @@
 				C890067E2A4DFB9D00436500 /* CharacterListConfigurator.swift in Sources */,
 				C890067C2A4DFB9D00436500 /* CharacterRequest.swift in Sources */,
 				C890062F2A4DFB3100436500 /* ContentView.swift in Sources */,
+				C890069F2A4EBE6900436500 /* CharacterListDM.swift in Sources */,
 				C89006882A4DFB9D00436500 /* ApiConstants.swift in Sources */,
 				C89006822A4DFB9D00436500 /* CharacterListInteractorImpl.swift in Sources */,
+				C89006AE2A4F285100436500 /* HeaderTitleWithImage.swift in Sources */,
 				C89006802A4DFB9D00436500 /* CharacterListView.swift in Sources */,
+				C89006A22A4F07D900436500 /* CharacterListCardView.swift in Sources */,
 				C890067D2A4DFB9D00436500 /* CharacterResponse.swift in Sources */,
 				C89006852A4DFB9D00436500 /* BaseRemote.swift in Sources */,
 				C89006872A4DFB9D00436500 /* BaseRemoteImpl.swift in Sources */,
+				C89006AB2A4F236300436500 /* CharacterDetailView.swift in Sources */,
 				C890067F2A4DFB9D00436500 /* CharacterListPresenterImpl.swift in Sources */,
 				C890062D2A4DFB3100436500 /* BaseApp.swift in Sources */,
 				C89006832A4DFB9D00436500 /* StringExtension.swift in Sources */,
 				C890067A2A4DFB9D00436500 /* CharacterRepository.swift in Sources */,
+				C89006A72A4F1DDD00436500 /* PaddingUtils.swift in Sources */,
 				C89006812A4DFB9D00436500 /* CharacterListViewModel.swift in Sources */,
 				C89006842A4DFB9D00436500 /* BaseRequest.swift in Sources */,
 				C890067B2A4DFB9D00436500 /* CharacterRepositoryImpl.swift in Sources */,
+				C89006A92A4F1F3A00436500 /* CustomSearchBar.swift in Sources */,
+				C89006A52A4F1ABD00436500 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
