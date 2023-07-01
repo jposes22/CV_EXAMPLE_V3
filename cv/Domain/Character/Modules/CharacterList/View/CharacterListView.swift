@@ -35,7 +35,7 @@ struct CharacterListView: View {
                     LazyVGrid(columns: columns, spacing: PaddingUtils.normalPadding) {
                         ForEach(characterViewModel.characterList, id: \.id) { character in
                             NavigationLink {
-                                CharacterDetailView(character: character)
+                                CharacterDetailConfigurator.createModule(characterId: character.id)
                             } label: {
                                 CharacterListCardView(character: character)
                             }

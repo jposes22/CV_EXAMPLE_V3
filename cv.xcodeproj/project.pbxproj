@@ -16,6 +16,8 @@
 		C8438B7F2A50965D008E6C2A /* CharacterDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B7E2A50965D008E6C2A /* CharacterDetailPresenterTest.swift */; };
 		C8438B812A5099B1008E6C2A /* CharacterDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B802A5099B1008E6C2A /* CharacterDetailInteractorTest.swift */; };
 		C8438B832A509C82008E6C2A /* CharacterRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */; };
+		C8438B852A509EF0008E6C2A /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B842A509EF0008E6C2A /* CharacterDetailViewModel.swift */; };
+		C8438B872A509F91008E6C2A /* CharacterDetailConfnigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B862A509F91008E6C2A /* CharacterDetailConfnigurator.swift */; };
 		C890062D2A4DFB3100436500 /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062C2A4DFB3100436500 /* BaseApp.swift */; };
 		C890062F2A4DFB3100436500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062E2A4DFB3100436500 /* ContentView.swift */; };
 		C89006312A4DFB3200436500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89006302A4DFB3200436500 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		C8438B7E2A50965D008E6C2A /* CharacterDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenterTest.swift; sourceTree = "<group>"; };
 		C8438B802A5099B1008E6C2A /* CharacterDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractorTest.swift; sourceTree = "<group>"; };
 		C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
+		C8438B842A509EF0008E6C2A /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		C8438B862A509F91008E6C2A /* CharacterDetailConfnigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConfnigurator.swift; sourceTree = "<group>"; };
 		C89006292A4DFB3100436500 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890062C2A4DFB3100436500 /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		C890062E2A4DFB3100436500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -347,6 +351,7 @@
 		C890066B2A4DFB9D00436500 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B862A509F91008E6C2A /* CharacterDetailConfnigurator.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				C89006AC2A4F283100436500 /* Components */,
 				C89006AA2A4F236300436500 /* CharacterDetailView.swift */,
 				C8438B7A2A5095E0008E6C2A /* CharacterDetailDM.swift */,
+				C8438B842A509EF0008E6C2A /* CharacterDetailViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8438B872A509F91008E6C2A /* CharacterDetailConfnigurator.swift in Sources */,
 				C89006862A4DFB9D00436500 /* BaseResponse.swift in Sources */,
 				C8438B792A5095AF008E6C2A /* CharacterDetailPresenter.swift in Sources */,
 				C890067E2A4DFB9D00436500 /* CharacterListConfigurator.swift in Sources */,
@@ -665,6 +672,7 @@
 				C890067B2A4DFB9D00436500 /* CharacterRepositoryImpl.swift in Sources */,
 				C8438B7B2A5095E0008E6C2A /* CharacterDetailDM.swift in Sources */,
 				C8438B732A50952F008E6C2A /* CharacterPageableResponse.swift in Sources */,
+				C8438B852A509EF0008E6C2A /* CharacterDetailViewModel.swift in Sources */,
 				C89006A92A4F1F3A00436500 /* CustomSearchBar.swift in Sources */,
 				C89006A52A4F1ABD00436500 /* ColorExtension.swift in Sources */,
 			);
