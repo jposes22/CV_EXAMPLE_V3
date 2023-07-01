@@ -1,10 +1,3 @@
-//
-//  CharacterRepositoryTests.swift
-//  cvTests
-//
-//  Created by DESGA on 27/6/23.
-//
-
 import XCTest
 @testable import cv
 
@@ -27,6 +20,13 @@ final class CharacterRepositoryTests: XCTestCase {
     func testDownloadCharacters() async throws {
         let result = await characterRepository.getCharacters()
         let characterResult = try? result.get().results.first
+        let characterMock = CharacterTestMock.character
+        XCTAssertEqual(characterResult, characterMock)
+    }
+    
+    func testDownloadCharacterById() async throws {
+        let result = await characterRepository.getCharacterById(id: 1)
+        let characterResult = try? result.get()
         let characterMock = CharacterTestMock.character
         XCTAssertEqual(characterResult, characterMock)
     }

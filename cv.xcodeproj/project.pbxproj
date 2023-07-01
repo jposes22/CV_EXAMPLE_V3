@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8438B642A506E44008E6C2A /* CharacterByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */; };
+		C8438B702A5093AE008E6C2A /* CharacterTestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */; };
 		C890062D2A4DFB3100436500 /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062C2A4DFB3100436500 /* BaseApp.swift */; };
 		C890062F2A4DFB3100436500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062E2A4DFB3100436500 /* ContentView.swift */; };
 		C89006312A4DFB3200436500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89006302A4DFB3200436500 /* Assets.xcassets */; };
@@ -26,7 +28,6 @@
 		C89006862A4DFB9D00436500 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006772A4DFB9D00436500 /* BaseResponse.swift */; };
 		C89006872A4DFB9D00436500 /* BaseRemoteImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006782A4DFB9D00436500 /* BaseRemoteImpl.swift */; };
 		C89006882A4DFB9D00436500 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006792A4DFB9D00436500 /* ApiConstants.swift */; };
-		C890068E2A4DFBB500436500 /* CharacterTestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890068C2A4DFBB500436500 /* CharacterTestMock.swift */; };
 		C890068F2A4DFBB500436500 /* CharacterRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */; };
 		C89006972A4DFBCC00436500 /* UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006952A4DFBCC00436500 /* UITestsLaunchTests.swift */; };
 		C89006982A4DFBCC00436500 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89006962A4DFBCC00436500 /* UITests.swift */; };
@@ -57,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterByIdRequest.swift; sourceTree = "<group>"; };
+		C8438B6C2A507D8E008E6C2A /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
+		C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTestMock.swift; sourceTree = "<group>"; };
 		C89006292A4DFB3100436500 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890062C2A4DFB3100436500 /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		C890062E2A4DFB3100436500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,7 +83,6 @@
 		C89006772A4DFB9D00436500 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		C89006782A4DFB9D00436500 /* BaseRemoteImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRemoteImpl.swift; sourceTree = "<group>"; };
 		C89006792A4DFB9D00436500 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		C890068C2A4DFBB500436500 /* CharacterTestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTestMock.swift; sourceTree = "<group>"; };
 		C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryTests.swift; sourceTree = "<group>"; };
 		C89006952A4DFBCC00436500 /* UITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C89006962A4DFBCC00436500 /* UITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
@@ -117,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8438B6E2A507EBC008E6C2A /* DataMock */ = {
+			isa = PBXGroup;
+			children = (
+				C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */,
+				C8438B6C2A507D8E008E6C2A /* CharacterRepositoryMock.swift */,
+			);
+			path = DataMock;
+			sourceTree = "<group>";
+		};
 		C89006202A4DFB3100436500 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +227,7 @@
 			children = (
 				C890065D2A4DFB9D00436500 /* CharacterRequest.swift */,
 				C890065E2A4DFB9D00436500 /* CharacterResponse.swift */,
+				C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -366,6 +379,7 @@
 		C890068A2A4DFBB500436500 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B6E2A507EBC008E6C2A /* DataMock */,
 				C890068B2A4DFBB500436500 /* Repository */,
 			);
 			path = Models;
@@ -374,7 +388,6 @@
 		C890068B2A4DFBB500436500 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				C890068C2A4DFBB500436500 /* CharacterTestMock.swift */,
 				C890068D2A4DFBB500436500 /* CharacterRepositoryTests.swift */,
 			);
 			path = Repository;
@@ -583,6 +596,7 @@
 				C89006822A4DFB9D00436500 /* CharacterListInteractorImpl.swift in Sources */,
 				C89006AE2A4F285100436500 /* HeaderTitleWithImage.swift in Sources */,
 				C89006802A4DFB9D00436500 /* CharacterListView.swift in Sources */,
+				C8438B642A506E44008E6C2A /* CharacterByIdRequest.swift in Sources */,
 				C89006A22A4F07D900436500 /* CharacterListCardView.swift in Sources */,
 				C890067D2A4DFB9D00436500 /* CharacterResponse.swift in Sources */,
 				C89006852A4DFB9D00436500 /* BaseRemote.swift in Sources */,
@@ -606,7 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C890068F2A4DFBB500436500 /* CharacterRepositoryTests.swift in Sources */,
-				C890068E2A4DFBB500436500 /* CharacterTestMock.swift in Sources */,
+				C8438B702A5093AE008E6C2A /* CharacterTestMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

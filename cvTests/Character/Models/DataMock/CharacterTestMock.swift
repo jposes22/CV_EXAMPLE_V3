@@ -10,4 +10,9 @@ struct CharacterTestMock {
         status: .alive,
         image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
     )
+    
+    static func getCharacterPageableResponse() -> Result<CharacterPageableResponse, ApiError> {
+        let response = CharacterPageableResponse(results: [character])
+        return Result.success(response)
+    }
 }
