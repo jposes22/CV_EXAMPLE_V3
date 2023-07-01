@@ -1,5 +1,9 @@
 import SwiftUI
 
+protocol CharacterDetailViewDisplayLogic {
+    func displayCharacterDetail(displayModel: CharacterDetailDM)
+}
+
 struct CharacterDetailView: View {
     let character: CharacterListDM
     var body: some View {

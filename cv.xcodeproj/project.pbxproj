@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		C8438B642A506E44008E6C2A /* CharacterByIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */; };
 		C8438B702A5093AE008E6C2A /* CharacterTestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */; };
+		C8438B732A50952F008E6C2A /* CharacterPageableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B722A50952F008E6C2A /* CharacterPageableResponse.swift */; };
+		C8438B772A509596008E6C2A /* CharacterDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B762A509596008E6C2A /* CharacterDetailInteractor.swift */; };
+		C8438B792A5095AF008E6C2A /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B782A5095AF008E6C2A /* CharacterDetailPresenter.swift */; };
+		C8438B7B2A5095E0008E6C2A /* CharacterDetailDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B7A2A5095E0008E6C2A /* CharacterDetailDM.swift */; };
+		C8438B7F2A50965D008E6C2A /* CharacterDetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B7E2A50965D008E6C2A /* CharacterDetailPresenterTest.swift */; };
+		C8438B812A5099B1008E6C2A /* CharacterDetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B802A5099B1008E6C2A /* CharacterDetailInteractorTest.swift */; };
+		C8438B832A509C82008E6C2A /* CharacterRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */; };
 		C890062D2A4DFB3100436500 /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062C2A4DFB3100436500 /* BaseApp.swift */; };
 		C890062F2A4DFB3100436500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062E2A4DFB3100436500 /* ContentView.swift */; };
 		C89006312A4DFB3200436500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89006302A4DFB3200436500 /* Assets.xcassets */; };
@@ -59,8 +66,14 @@
 
 /* Begin PBXFileReference section */
 		C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterByIdRequest.swift; sourceTree = "<group>"; };
-		C8438B6C2A507D8E008E6C2A /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
 		C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTestMock.swift; sourceTree = "<group>"; };
+		C8438B722A50952F008E6C2A /* CharacterPageableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPageableResponse.swift; sourceTree = "<group>"; };
+		C8438B762A509596008E6C2A /* CharacterDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractor.swift; sourceTree = "<group>"; };
+		C8438B782A5095AF008E6C2A /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
+		C8438B7A2A5095E0008E6C2A /* CharacterDetailDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailDM.swift; sourceTree = "<group>"; };
+		C8438B7E2A50965D008E6C2A /* CharacterDetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenterTest.swift; sourceTree = "<group>"; };
+		C8438B802A5099B1008E6C2A /* CharacterDetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailInteractorTest.swift; sourceTree = "<group>"; };
+		C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
 		C89006292A4DFB3100436500 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890062C2A4DFB3100436500 /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		C890062E2A4DFB3100436500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,10 +136,44 @@
 		C8438B6E2A507EBC008E6C2A /* DataMock */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */,
 				C8438B6F2A5093AE008E6C2A /* CharacterTestMock.swift */,
-				C8438B6C2A507D8E008E6C2A /* CharacterRepositoryMock.swift */,
 			);
 			path = DataMock;
+			sourceTree = "<group>";
+		};
+		C8438B742A50954F008E6C2A /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				C890065D2A4DFB9D00436500 /* CharacterRequest.swift */,
+				C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		C8438B752A509554008E6C2A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				C890065E2A4DFB9D00436500 /* CharacterResponse.swift */,
+				C8438B722A50952F008E6C2A /* CharacterPageableResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		C8438B7C2A509619008E6C2A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C8438B802A5099B1008E6C2A /* CharacterDetailInteractorTest.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C8438B7D2A509620008E6C2A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C8438B7E2A50965D008E6C2A /* CharacterDetailPresenterTest.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		C89006202A4DFB3100436500 = {
@@ -225,9 +272,8 @@
 		C890065C2A4DFB9D00436500 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				C890065D2A4DFB9D00436500 /* CharacterRequest.swift */,
-				C890065E2A4DFB9D00436500 /* CharacterResponse.swift */,
-				C8438B632A506E44008E6C2A /* CharacterByIdRequest.swift */,
+				C8438B742A50954F008E6C2A /* Request */,
+				C8438B752A509554008E6C2A /* Response */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -308,6 +354,7 @@
 		C890066C2A4DFB9D00436500 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B782A5095AF008E6C2A /* CharacterDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -317,6 +364,7 @@
 			children = (
 				C89006AC2A4F283100436500 /* Components */,
 				C89006AA2A4F236300436500 /* CharacterDetailView.swift */,
+				C8438B7A2A5095E0008E6C2A /* CharacterDetailDM.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +372,7 @@
 		C890066F2A4DFB9D00436500 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B762A509596008E6C2A /* CharacterDetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -414,6 +463,8 @@
 		C890069B2A4E0A7E00436500 /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B7D2A509620008E6C2A /* Presenter */,
+				C8438B7C2A509619008E6C2A /* Interactor */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -588,8 +639,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C89006862A4DFB9D00436500 /* BaseResponse.swift in Sources */,
+				C8438B792A5095AF008E6C2A /* CharacterDetailPresenter.swift in Sources */,
 				C890067E2A4DFB9D00436500 /* CharacterListConfigurator.swift in Sources */,
 				C890067C2A4DFB9D00436500 /* CharacterRequest.swift in Sources */,
+				C8438B772A509596008E6C2A /* CharacterDetailInteractor.swift in Sources */,
 				C890062F2A4DFB3100436500 /* ContentView.swift in Sources */,
 				C890069F2A4EBE6900436500 /* CharacterListDM.swift in Sources */,
 				C89006882A4DFB9D00436500 /* ApiConstants.swift in Sources */,
@@ -610,6 +663,8 @@
 				C89006812A4DFB9D00436500 /* CharacterListViewModel.swift in Sources */,
 				C89006842A4DFB9D00436500 /* BaseRequest.swift in Sources */,
 				C890067B2A4DFB9D00436500 /* CharacterRepositoryImpl.swift in Sources */,
+				C8438B7B2A5095E0008E6C2A /* CharacterDetailDM.swift in Sources */,
+				C8438B732A50952F008E6C2A /* CharacterPageableResponse.swift in Sources */,
 				C89006A92A4F1F3A00436500 /* CustomSearchBar.swift in Sources */,
 				C89006A52A4F1ABD00436500 /* ColorExtension.swift in Sources */,
 			);
@@ -619,6 +674,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8438B7F2A50965D008E6C2A /* CharacterDetailPresenterTest.swift in Sources */,
+				C8438B832A509C82008E6C2A /* CharacterRepositoryMock.swift in Sources */,
+				C8438B812A5099B1008E6C2A /* CharacterDetailInteractorTest.swift in Sources */,
 				C890068F2A4DFBB500436500 /* CharacterRepositoryTests.swift in Sources */,
 				C8438B702A5093AE008E6C2A /* CharacterTestMock.swift in Sources */,
 			);

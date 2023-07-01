@@ -1,4 +1,3 @@
-import XCTest
 @testable import cv
 
 class CharacterRepositoryMock: CharacterRepository {
