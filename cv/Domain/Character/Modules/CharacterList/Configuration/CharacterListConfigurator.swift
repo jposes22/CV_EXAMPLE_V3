@@ -9,8 +9,10 @@ final class CharacterListConfigurator {
         let presenter = CharacterListPresenterImpl()
         
         let characterRepository = CharacterRepositoryImpl(baseRemote: BaseRemoteImpl())
-        let interactor = CharacterListInteractorImpl(presenter: presenter, characterListRepository: characterRepository)
+        let interactor = CharacterListInteractorImpl()
+        interactor.characterRepository = characterRepository
         
+        interactor.presenter = presenter
         view.interactor = interactor
         presenter.view = view
         

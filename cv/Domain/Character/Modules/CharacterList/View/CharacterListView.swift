@@ -13,7 +13,9 @@ extension CharacterListView: CharacterListViewDisplayLogic {
     }
     
     func fetchCharacters() {
-        interactor?.downloadCharacterList()
+        Task {
+            await interactor?.downloadCharacterList()
+        }
     }
     
 }

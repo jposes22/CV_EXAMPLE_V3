@@ -18,6 +18,7 @@
 		C8438B832A509C82008E6C2A /* CharacterRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */; };
 		C8438B852A509EF0008E6C2A /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B842A509EF0008E6C2A /* CharacterDetailViewModel.swift */; };
 		C8438B872A509F91008E6C2A /* CharacterDetailConfnigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B862A509F91008E6C2A /* CharacterDetailConfnigurator.swift */; };
+		C8438B892A50C033008E6C2A /* CharacterListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8438B882A50C033008E6C2A /* CharacterListInteractorTest.swift */; };
 		C890062D2A4DFB3100436500 /* BaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062C2A4DFB3100436500 /* BaseApp.swift */; };
 		C890062F2A4DFB3100436500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890062E2A4DFB3100436500 /* ContentView.swift */; };
 		C89006312A4DFB3200436500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89006302A4DFB3200436500 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		C8438B822A509C82008E6C2A /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
 		C8438B842A509EF0008E6C2A /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		C8438B862A509F91008E6C2A /* CharacterDetailConfnigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConfnigurator.swift; sourceTree = "<group>"; };
+		C8438B882A50C033008E6C2A /* CharacterListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractorTest.swift; sourceTree = "<group>"; };
 		C89006292A4DFB3100436500 /* cv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890062C2A4DFB3100436500 /* BaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApp.swift; sourceTree = "<group>"; };
 		C890062E2A4DFB3100436500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		C890069D2A4E0AF400436500 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				C8438B882A50C033008E6C2A /* CharacterListInteractorTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8438B892A50C033008E6C2A /* CharacterListInteractorTest.swift in Sources */,
 				C8438B7F2A50965D008E6C2A /* CharacterDetailPresenterTest.swift in Sources */,
 				C8438B832A509C82008E6C2A /* CharacterRepositoryMock.swift in Sources */,
 				C8438B812A5099B1008E6C2A /* CharacterDetailInteractorTest.swift in Sources */,

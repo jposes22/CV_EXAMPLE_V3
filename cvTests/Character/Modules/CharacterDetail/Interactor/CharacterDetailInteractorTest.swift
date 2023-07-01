@@ -36,15 +36,14 @@ class CharacterDetailInteractorTest: XCTestCase {
 }
 
 extension CharacterDetailInteractorTest {
-    // TODO: Fix test task not executed
-//    func testPresentCharacterWhenSuccess() async {
-//        // Given
-//        characterRepositoryMock.willReturnCharacters(result: CharacterTestMock.getCharacterPageableResponse())
-//
-//        // When
-//        interactor.downloadCharacterById(characterId: 1)
-//
-//        // Then
-//        XCTAssertTrue(presenterMock.presentCharacterCalled)
-//    }
+    func testPresentCharacterWhenSuccess() async {
+        // Given
+        characterRepositoryMock.willReturnCharacterById(result: CharacterTestMock.getCharacterByIdResponse())
+
+        // When
+        await interactor.downloadCharacterById(characterId: 1)
+
+        // Then
+        XCTAssertTrue(presenterMock.presentCharacterCalled)
+    }
 }

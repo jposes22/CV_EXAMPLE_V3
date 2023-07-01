@@ -1,22 +1,19 @@
 import Foundation
 
 protocol CharacterListInteractor {
-    func downloadCharacterList()
+    var presenter: CharacterListPresenter? { get set }
+    var characterRepository: CharacterRepository? { get set }
+    
+    func downloadCharacterList() async
 }
 
 class CharacterListInteractorImpl: CharacterListInteractor {
-    let presenter: CharacterListPresenter
-    let characterListRepository: CharacterRepository
+    var presenter: CharacterListPresenter?
+    var characterRepository: CharacterRepository?
     
-    init(presenter: CharacterListPresenter, characterListRepository: CharacterRepository) {
-        self.presenter = presenter
-        self.characterListRepository = characterListRepository
+    func downloadCharacterList() async {
+        guard let characterResult = await characterRepository?.getCharacters() else { return }
+        presenter?.presentCharacters(result: characterResult)
     }
     
-    func downloadCharacterList() {
-        Task {
-            let characterResult = await characterListRepository.getCharacters()
-            presenter.presentCharacters(result: characterResult)
-        }
-    }
 }

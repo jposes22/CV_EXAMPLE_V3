@@ -11,8 +11,10 @@ extension CharacterDetailView: CharacterDetailViewDisplayLogic {
         }
     }
     func fetchCharacterDetail() {
-        guard let characterId = characterViewModel.characterId else { return }
-        interactor?.downloadCharacterById(characterId: characterId)
+        Task {
+            guard let characterId = characterViewModel.characterId else { return }
+            await interactor?.downloadCharacterById(characterId: characterId)
+        }
     }
     
 }
