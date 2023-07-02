@@ -1,6 +1,6 @@
 import Foundation
 
-@MainActor class CharacterListViewModel: ObservableObject {
+class CharacterListViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var characterList: [CharacterListDM] = []
 }

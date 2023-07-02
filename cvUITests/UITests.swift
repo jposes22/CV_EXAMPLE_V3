@@ -1,10 +1,3 @@
-//
-//  cvUITests.swift
-//  cvUITests
-//
-//  Created by DESGA on 27/6/23.
-//
-
 import XCTest
 
 final class UITests: XCTestCase {

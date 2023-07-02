@@ -1,8 +1,12 @@
 import Foundation
 
-@MainActor class CharacterDetailViewModel: ObservableObject {
-    @Published var characterId: Int?
+class CharacterDetailViewModel: ObservableObject {
+    @Published private(set) var characterId: Int?
     @Published var characterDetail: CharacterDetailDM?
+    
+    func setCharacterId(characterId: Int) {
+        self.characterId = characterId
+    }
 }
 
 #if DEBUG

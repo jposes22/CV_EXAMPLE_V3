@@ -3,7 +3,7 @@ import SwiftUI
 
 final class CharacterDetailConfigurator {
     
-    @MainActor class func createModule(characterId: Int) -> some View {
+    class func createModule(characterId: Int) -> some View {
         var view = CharacterDetailView()
         let presenter = CharacterDetailPresenterImpl()
         
@@ -15,9 +15,9 @@ final class CharacterDetailConfigurator {
         interactor.presenter = presenter
         presenter.view = view
         
-        view.characterViewModel.characterId = characterId
-
+        view.characterViewModel.setCharacterId(characterId: characterId)
+        
         return view
     }
-
+    
 }
