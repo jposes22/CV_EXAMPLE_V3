@@ -31,7 +31,7 @@ struct CharacterDetailView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     if let character = characterViewModel.characterDetail {
-                        HeaderTitleWithImage(characterDetail: character)
+                        HeaderTitleWithImage(name: character.name, image: character.image)
                     } else {
                         ProgressView()
                     }
