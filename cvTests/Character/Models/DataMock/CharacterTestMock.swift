@@ -4,20 +4,24 @@ import Foundation
 struct CharacterTestMock {
     private init() { /*Not Implement*/ }
     
-    // TODO: change to read json from files all tests
-    static let character = CharacterResponse(
-        id: 1,
-        name: "Rick Sanchez",
-        status: .alive,
-        image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-    )
+    private static let characterResponseJson = "CharacterResponse"
+    private static let characterPageableResponseJson = "CharacterPageabelResponse"
+    
+    static func getCharacter() -> CharacterResponse? {
+        return TestUtils.parseLocalJsonToObject(with: characterResponseJson)
+    }
     
     static func getCharacterPageableResponse() -> Result<CharacterPageableResponse, ApiError> {
-        let response = CharacterPageableResponse(results: [character])
+        guard let response: CharacterPageableResponse = TestUtils.parseLocalJsonToObject(with: characterPageableResponseJson) else {
+            return Result.failure(.appInternalError)
+        }
         return Result.success(response)
     }
     
     static func getCharacterByIdResponse() -> Result<CharacterResponse, ApiError> {
-        return Result.success(character)
+        guard let response: CharacterResponse = TestUtils.parseLocalJsonToObject(with: characterResponseJson) else {
+            return Result.failure(.appInternalError)
+        }
+        return Result.success(response)
     }
 }

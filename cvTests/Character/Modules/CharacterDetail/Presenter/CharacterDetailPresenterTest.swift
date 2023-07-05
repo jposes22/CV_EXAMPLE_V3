@@ -25,18 +25,14 @@ class CharacterDetailPresenterTest: XCTestCase {
 extension CharacterDetailPresenterTest {
     func testDisplayCharacterDetailWhenSuccess() {
         // Given
-        presenter.presentCharacter(result: CharacterTestMock.getCharacterByIdResponse())
+        let expectedResult = CharacterTestMock.getCharacterByIdResponse()
+        presenter.presentCharacter(result: expectedResult)
         // When
         
         // Then
-        XCTAssertEqual(
-            viewMock.displayModel?.id,
-            1
-        )
-        XCTAssertEqual(
-            viewMock.displayModel?.name,
-            "Rick Sanchez"
-        )
+        assertIsSuccessResultAndNotNil(expectedResult)
+        XCTAssertEqual(viewMock.displayModel?.id, 1)
+        XCTAssertEqual(viewMock.displayModel?.name, "Rick Sanchez")
         XCTAssertTrue(viewMock.displayCharacterDetailCalled, "displayCharacterDetailCalled not called")
     }
 }

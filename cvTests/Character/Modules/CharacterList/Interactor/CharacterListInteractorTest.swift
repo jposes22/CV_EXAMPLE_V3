@@ -38,12 +38,14 @@ class CharacterListInteractorTest: XCTestCase {
 extension CharacterListInteractorTest {
     func testPresentCharactersWhenSuccess() async {
         // Given
-        characterRepositoryMock.willReturnCharacters(result: CharacterTestMock.getCharacterPageableResponse())
+        let expectedResult = CharacterTestMock.getCharacterPageableResponse()
+        characterRepositoryMock.willReturnCharacters(result: expectedResult)
 
         // When
         await interactor.downloadCharacterList()
 
         // Then
+        assertIsSuccessResultAndNotNil(expectedResult)
         XCTAssertTrue(presenterMock.presentCharacterIsCalled)
     }
 }
