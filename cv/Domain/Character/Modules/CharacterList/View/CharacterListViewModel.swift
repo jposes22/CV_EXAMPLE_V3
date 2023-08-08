@@ -1,6 +1,7 @@
 import Foundation
 
 class CharacterListViewModel: ObservableObject {
+    var currentPage: Int = 1
     @Published var searchText: String = ""
     @Published var characterList: [CharacterListDM] = []
 }

@@ -19,7 +19,7 @@ final class CharacterRepositoryTests: XCTestCase {
 
     func testDownloadCharacters() async throws {
         // TODO: not only check first
-        let result = await characterRepository.getCharacters()
+        let result = await characterRepository.getCharacters(page: 0)
         let characterResult = try? result.get().results.first
         let characterMock = CharacterTestMock.getCharacter()
         

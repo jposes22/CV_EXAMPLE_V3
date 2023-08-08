@@ -8,16 +8,28 @@ protocol CharacterListViewDisplayLogic {
 extension CharacterListView: CharacterListViewDisplayLogic {
     func displayCharacterList(displayModel: [CharacterListDM]) {
         DispatchQueue.main.async {
-            characterViewModel.characterList = displayModel
+            characterViewModel.characterList.append(contentsOf: displayModel)
         }
     }
-    
-    func fetchCharacters() {
+}
+
+// MARK: - Private methods
+private extension CharacterListView {
+    private func loadMoreItemsIfNeeded(currentItem: CharacterListDM?) {
+        guard let currentItem = currentItem else {
+            return
+        }
+        
+        if characterViewModel.characterList.last == currentItem {
+            characterViewModel.currentPage += 1
+            fetchCharacters()
+        }
+    }
+    private func fetchCharacters() {
         Task {
-            await interactor?.downloadCharacterList()
+            await interactor?.downloadCharacterList(page: characterViewModel.currentPage)
         }
     }
-    
 }
 
 struct CharacterListView: View {
@@ -31,7 +43,9 @@ struct CharacterListView: View {
         // TODO: Remove NavigationStack and implement router system to navigate
         NavigationStack {
             VStack {
-                CustomSearchBar(searchText: $characterViewModel.searchText)
+                CustomSearchBar(searchText: $characterViewModel.searchText) {
+                    fetchCharacters()
+                }
                     .padding(PaddingUtils.normalPadding)
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: columns, spacing: PaddingUtils.normalPadding) {
@@ -40,6 +54,9 @@ struct CharacterListView: View {
                                 CharacterDetailConfigurator.createModule(characterId: character.id)
                             } label: {
                                 CharacterListCardView(character: character)
+                                    .onAppear {
+                                        loadMoreItemsIfNeeded(currentItem: character)
+                                    }
                             }
                         }
                     }

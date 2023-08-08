@@ -8,4 +8,13 @@ class CharacterRequest: BaseRequest {
     
     var method: Method = .GET
     
+    var pathParameters: [String: String] {
+        return ["page": "\(page)"]
+    }
+    
+    private let page: Int
+    
+    init(page: Int) {
+        self.page = page
+    }
 }

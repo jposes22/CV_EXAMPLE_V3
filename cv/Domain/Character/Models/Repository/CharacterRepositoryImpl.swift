@@ -12,8 +12,8 @@ class CharacterRepositoryImpl: CharacterRepository {
         return await baseRemote.fetchRequest(request: characterRequest)
     }
     
-    func getCharacters() async -> Result<CharacterPageableResponse, ApiError> {
-        let characterRequest = CharacterRequest()
+    func getCharacters(page: Int) async -> Result<CharacterPageableResponse, ApiError> {
+        let characterRequest = CharacterRequest(page: page)
         return await baseRemote.fetchRequest(request: characterRequest)
     }
 }

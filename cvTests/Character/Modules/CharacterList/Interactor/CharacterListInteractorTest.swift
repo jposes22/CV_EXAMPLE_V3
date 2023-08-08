@@ -42,7 +42,7 @@ extension CharacterListInteractorTest {
         characterRepositoryMock.willReturnCharacters(result: expectedResult)
 
         // When
-        await interactor.downloadCharacterList()
+        await interactor.downloadCharacterList(page: 0)
 
         // Then
         assertIsSuccessResultAndNotNil(expectedResult)

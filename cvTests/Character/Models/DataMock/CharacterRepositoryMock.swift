@@ -22,7 +22,7 @@ class CharacterRepositoryMock: CharacterRepository {
         return .failure(ApiError.appInternalError)
     }
     
-    func getCharacters() async -> Result<CharacterPageableResponse, ApiError> {
+    func getCharacters(page: Int) async -> Result<CharacterPageableResponse, ApiError> {
         if let charactersResult {
             return charactersResult
         }

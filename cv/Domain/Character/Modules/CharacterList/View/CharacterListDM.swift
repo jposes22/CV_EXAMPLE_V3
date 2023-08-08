@@ -1,6 +1,6 @@
 import Foundation
 
-struct CharacterListDM {
+struct CharacterListDM: Equatable {
     let id: Int
     let name: String?
     let image: String?
